@@ -1,6 +1,5 @@
-﻿#### Module importé
 import matplotlib.pyplot as plt
-
+fig = plt.figure()  # utile pour le fonctionnement dans replit
 
 #### Fonction
 def caluler_vitesse(x, y, dt, i):
@@ -21,12 +20,13 @@ def afficher_graphe():
     # Configuration de la représentation graphique"""
     plt.plot(x, y, 'o', markersize=5)
     plt.xlabel("x (en m)")
-    plt.xlabel("y (en m)")
+    plt.ylabel("y (en m)")
     plt.title("chronophotographie")
 
     # Affichage
-    plt.show()
-
+    #plt.show()   Si utilisation hors replit
+    plt.savefig("graph.png")
+    
 
 #### Programme principal
 # Valeurs experimentales
